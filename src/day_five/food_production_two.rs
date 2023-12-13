@@ -1,5 +1,10 @@
 fn food_production_two(data: Vec<Vec<&str>>, seeds: &str) -> i64 {
     /*
+     Difference between this and the initial one
+     is that it uses sqrt to triangulate where to
+     then do a lineat search for the smallest possible
+     outcome
+
         Each line within a map contains three numbers:
             1. The destination range start
             2. The source range start
@@ -74,7 +79,7 @@ fn food_production_two(data: Vec<Vec<&str>>, seeds: &str) -> i64 {
         continue;
     }
 
-    // TODO: The available_seeds is the ranges with [bottom, top] data shape
+    // The available_seeds is the ranges with [bottom, top] data shape
 
     let mut aggregate_min_locations = vec![];
 
